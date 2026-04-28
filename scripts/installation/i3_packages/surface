@@ -1,0 +1,39 @@
+# i3
+i3 xorg rofi polybar
+
+# Theme
+adwaita-icon-theme gnome-themes-extra breeze
+
+# Tool
+unclutter picom gamemode tree dolphin maim mpv
+
+# Browser
+firefox firefox-tridactyl qutebrowser
+# Dependecies
+python-adblock xdg-desktop-portal xdg-desktop-portal-gtk
+
+# Lang
+rustup clang mold cargo-binstall rust-analyzer
+
+# Shell
+zsh bc
+
+# Font
+noto-fonts noto-fonts-cjk noto-fonts-emoji
+wqy-zenhei wqy-microhei
+otf-codenewroman-nerd ttf-jetbrains-mono-nerd
+
+# Touchscreen
+touchegg
+
+# Audio
+pavucontrol pulseaudio
+
+# Neovim
+neovim npm ripgrep fd luarocks fzf go lua51 tree-sitter tree-sitter-cli
+
+# Terminal
+kitty
+
+# Clipboard
+xclip xsel

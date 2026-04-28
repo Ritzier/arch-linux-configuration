@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG="$SCRIPT_DIR/../config/i3.conf"
+PACKAGES="$SCRIPT_DIR/../i3_packages/packages"
+AUR_PACKAGES="$SCRIPT_DIR/../i3_packages/aur_packages"
+
+# Load `common` utils
+source "$SCRIPT_DIR/system/common.sh"
+
+# Load `config`
+load_config "$SCRIPT_DIR/../config/system.conf"
+
+# Required fields
+FIELDS=(
+    SERVICES
+)
+for f in "${FIELDS[@]}"; do
+    [[ -n "${!f:-}" ]] || fail "missing field: $f "
+done
+
+# ---- Install packages ----
+bash "$SCRIPT_DIR/system/packages.sh" "$PACKAGES"
+
+# ---- Paru ----
+bash "$SCRIPT_DIR/i3/paru.sh"
+
+# ---- Aur Packages Install ----
+bash "$SCRIPT_DIR/i3/aur_packages.sh" "$AUR_PACKAGES"
+
+# ---- Copy Path ----
+bash "$SCRIPT_DIR/i3/copy_config.sh"
+
+# ---- Rust Toolchain ----
+bash "$SCRIPT_DIR/i3/rust.sh"
+
+# ---- Systemctl User ----
+bash "$SCRIPT_DIR/i3/systemctl.sh" "$CONFIG"
+
+# ---- VAAPI ----
+bash "$SCRIPT_DIR/i3/vaapi.sh"
+
+# ---- ZSH -----
+bash "$SCRIPT_DIR/i3/zsh.sh"
+bash "$SCRIPT_DIR/i3/zsh_theme.sh"
+
+# ---- Fcitx5 ----
+bash "$SCRIPT_DIR/i3/fcitx5_theme.sh"
+
+# ---- Dark Theme ----
+bash "$SCRIPT_DIR/i3/dark.sh"
