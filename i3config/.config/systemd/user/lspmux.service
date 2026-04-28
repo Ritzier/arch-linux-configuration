@@ -1,0 +1,9 @@
+[Unit]
+Description=Rust Analyzer (LSP Mux)
+
+[Service]
+ExecStart=/usr/bin/lspmux server
+Restart=always
+
+[Install]
+WantedBy=default.target

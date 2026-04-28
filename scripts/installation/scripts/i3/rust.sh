@@ -37,3 +37,7 @@ fi
 # Rust tools
 # -----------------------------
 cargo binstall cargo-leptos leptosfmt -y
+
+# Lspmux
+systemctl --user daemon-reload
+systemctl --user enable --now lspmux
