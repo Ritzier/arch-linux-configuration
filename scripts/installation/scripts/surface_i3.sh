@@ -10,7 +10,7 @@ AUR_PACKAGES="$SCRIPT_DIR/../i3_packages/aur_package"
 source "$SCRIPT_DIR/system/common.sh"
 
 # Load `config`
-load_config "$SCRIPT_DIR/../config/system.conf"
+load_config "$CONFIG"
 
 # Required fields
 FIELDS=(

@@ -9,7 +9,7 @@ PACKAGES="$SCRIPT_DIR/../packages/system"
 source "$SCRIPT_DIR/system/common.sh"
 
 # Load `config`
-load_config "$SCRIPT_DIR/../config/system.conf"
+load_config "$CONFIG"
 
 # Required fields
 FIELDS=(

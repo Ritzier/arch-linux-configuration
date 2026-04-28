@@ -2,14 +2,14 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-CONFIG="$SCRIPT_DIR/../config/system.conf"
-PACKAGES="$SCRIPT_DIR/../packages/system"
+CONFIG="$SCRIPT_DIR/../config/surface_system.conf"
+PACKAGES="$SCRIPT_DIR/../packages/surface_system"
 
 # Load `common` utils
 source "$SCRIPT_DIR/system/common.sh"
 
 # Load `config`
-load_config "$SCRIPT_DIR/../config/system.conf"
+load_config "$CONFIG"
 
 # Required fields
 FIELDS=(
