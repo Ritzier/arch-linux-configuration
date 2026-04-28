@@ -1,0 +1,17 @@
+# System base package
+linux-surface linux-surface-headers linux-firmware base base-devel zram-generator
+
+# Intel
+intel-ucode mesa vulkan-intel intel-media-driver
+
+# Wireless
+bluez bluez-utils networkmanager wireless-regdb
+
+# Audio
+pulseaudio pavucontrol
+
+# Tools
+git neovim rsync arch-install-scripts less curl wget openssh reflector
+
+# Power Management
+power-profiles-daemon

@@ -1,0 +1,11 @@
+# System base package
+linux-zen linux-zen-headers linux-firmware base base-devel zram-generator
+
+# Wireless
+bluez bluez-utils networkmanager wireless-regdb
+
+# Audio
+pulseaudio pavucontrol
+
+# Tools
+git neovim rsync arch-install-scripts less curl wget openssh reflector
