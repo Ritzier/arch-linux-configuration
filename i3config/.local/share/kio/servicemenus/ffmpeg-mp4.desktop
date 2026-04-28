@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=video/*;
+Actions=convert_mp4;
+X-KDE-Submenu=Video Conversion
+
+[Desktop Action convert_mp4]
+Name=Convert to MP4
+Icon=video-mp4
+Exec=/home/ritzier/.local/share/kio/servicemenus/convert-mp4.sh %F

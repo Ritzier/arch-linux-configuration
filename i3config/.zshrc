@@ -1,0 +1,29 @@
+export PATH=$HOME/bin/:$HOME/.cargo/bin/:$HOME/.local/bin/:$HOME/.local/share/nvim/mason/bin/:$HOME/go/bin/:$PATH
+export ZSH="$HOME/.oh-my-zsh"
+
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+export DOCKER_BUILDKIT=0
+
+export DISABLE_AUTO_UPDATE="true" # Disable OMZ update check
+export DISABLE_UPDATE_PROMPT="true" # Disable OMZ update prompt
+
+export EDITOR="nvim"
+export GIT_EDITOR="nvim"
+
+ZSH_THEME="ritz"
+
+plugins=(git copypath copyfile)
+
+source $ZSH/oh-my-zsh.sh
+source $HOME/python/bin/activate
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
+alias so="source $HOME/.zshrc"
+alias getcode="bash $HOME/scripts/getcode.sh"
+alias getcode2="bash $HOME/scripts/getcode2.sh"
+alias countline="bash $HOME/scripts/countline.sh"
+
+alias "c=xclip -selection clipboard"
+alias "v=xclip -selection clipboard -o"
+
+export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock

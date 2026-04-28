@@ -1,0 +1,16 @@
+" set dark
+set theme catppuccin-mocha-cli
+
+unbind h
+unbind t
+unbind <C-e>
+bind h scrollline 4
+bind t scrollline -4
+bind m scrollpx -50 0
+bind s scrollpx 50 0
+
+bind M back
+bind S forward
+
+bind <A-t> tabprev
+bind <A-h> tabnext

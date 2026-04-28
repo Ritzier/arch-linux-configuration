@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=video/*;
+Actions=convert_x265;
+X-KDE-Submenu=Video Conversion
+
+[Desktop Action convert_x265]
+Name=Convert to H.265/HEVC
+Icon=video-mp4
+Exec=/home/ritzier/.local/share/kio/servicemenus/convert-x265.sh %F
