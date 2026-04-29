@@ -35,3 +35,6 @@ kitty
 
 # Clipboard
 xclip xsel
+
+# Podman
+podman podman-compose fuse-overlayfs

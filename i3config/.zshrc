@@ -27,3 +27,5 @@ alias "c=xclip -selection clipboard"
 alias "v=xclip -selection clipboard -o"
 
 export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
+
+# export TMPDIR=/mnt/nvme/tmp

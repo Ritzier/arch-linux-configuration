@@ -51,6 +51,9 @@ bash "$SCRIPT_DIR/i3/fcitx5_theme.sh"
 # ---- Dark Theme ----
 bash "$SCRIPT_DIR/i3/dark.sh"
 
+# ---- Podman ----
+bash "$SCRIPT_DIR/i3/podman.sh"
+
 # ---- Surface ----
 bash "$SCRIPT_DIR/i3/surface/surface.sh"
 bash "$SCRIPT_DIR/i3/surface/polybar.sh"
